@@ -6,7 +6,7 @@
         {% for member in members %}
         <p>{{ member.first_name }} {{ member.last_name }}<br>
            {{ member.role_in_band }}</p>
-        <p>{{ member.gear }}<br>
+        <p>Gear: {{ member.gear }}<br>
            {{ member.bio }}</p>
         {% endfor %}
     </div>
