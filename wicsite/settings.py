@@ -149,10 +149,8 @@ LOGGING = {
     }
 }
 
-PYAPNS_CONFIG = {
-    'HOST': 'http://localhost:7077/',
-    'TIMEOUT': 15,
-    'INITIAL': [
-        ('WalkInComa', "%s/development.pem" % os.path.join(PROJECT_DIR, 'certs'), 'sandbox'),
-    ]
+APN_CONFIG = {
+    'key_file': "%s/development-key.pem" % os.path.join(PROJECT_DIR, 'certs'),
+    'cert_file': "%s/development.pem" % os.path.join(PROJECT_DIR, 'certs'),
+    'use_sandbox': True,
 }
