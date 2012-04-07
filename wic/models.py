@@ -11,7 +11,7 @@ class BandMember(models.Model):
     avatar = models.FileField(upload_to='avatars')
 
     def __unicode__(self):
-        return self.last_name
+        return self.nickname
 
 class Gig(models.Model):
     title = models.CharField(max_length=255)
