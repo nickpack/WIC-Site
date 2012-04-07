@@ -20,3 +20,6 @@ class MembersResource(ModelResource):
 class AlbumsResource(ModelResource):
     model = Album
     ordering = ('release_date')
+
+class DeviceTokensResource(ModelResource):
+    model = DeviceToken

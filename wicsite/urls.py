@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from djangorestframework.views import ListOrCreateModelView, InstanceModelView
+from wic.resources import *
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,4 +17,6 @@ urlpatterns = patterns('',
     url(r'^band/$', 'wic.views.band_index'),
     url(r'^contact/$', 'wic.views.contact'),
     url(r'^$', 'wic.views.main_index'),
+    url(r'^api/devices/$', ListOrCreateModelView.as_view(resource=DeviceTokensResource)),
+    url(r'^api/live/$', ListOrCreateModelView.as_view(resource=GigsResource)),
 )
