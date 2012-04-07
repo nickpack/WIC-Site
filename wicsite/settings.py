@@ -148,3 +148,11 @@ LOGGING = {
         },
     }
 }
+
+PYAPNS_CONFIG = {
+    'HOST': 'http://localhost:7077/',
+    'TIMEOUT': 15,
+    'INITIAL': [
+        ('WalkInComa', "%s/development.pem" % os.path.join(PROJECT_DIR, 'certs'), 'sandbox'),
+    ]
+}
