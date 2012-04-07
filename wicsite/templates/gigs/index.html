@@ -5,8 +5,8 @@
     {% for gig in gig_list %}
     <h1 class="gig-title">{{ gig.title }}</h1>
        <p>{{ gig.location }}<br>
-       {{ gig.event_info }}<br>
        {{ gig.start_date }} - {{ gig.end_date }}<br>
+       {{ gig.event_info }}<br>
        Other Bands: {{ gig.other_bands }}</p>
     {% endfor %}
 </ul>
