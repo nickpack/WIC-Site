@@ -65,7 +65,7 @@ class NewsArticle(models.Model):
 
 class Photo(models.Model):
     title = models.CharField(blank=True, max_length=100)
-    flickr_id = models.IntegerField()
+    flickr_id = models.BigIntegerField()
     flickr_owner = models.CharField(max_length=20)
     flickr_server = models.IntegerField()
     flickr_secret = models.CharField(max_length=50)
