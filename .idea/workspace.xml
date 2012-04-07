@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/resources.py" afterPath="$PROJECT_DIR$/wic/resources.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/urls.py" afterPath="$PROJECT_DIR$/wicsite/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
     </list>
     <ignored path="wicnew.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="10" selection-start="5072" selection-end="5082" vertical-scroll-proportion="0.0">
+            <state line="120" column="26" selection-start="4239" selection-end="4239" vertical-scroll-proportion="0.5049505">
               <folding />
             </state>
           </provider>
@@ -84,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.5445545">
+            <state line="22" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -149,10 +147,10 @@
         <option value="$PROJECT_DIR$/wicsite/templates/band/index.html" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/wicsite/settings.py" />
         <option value="$PROJECT_DIR$/wic/management/commands/apnfeedback.py" />
         <option value="$PROJECT_DIR$/wic/resources.py" />
         <option value="$PROJECT_DIR$/wicsite/urls.py" />
+        <option value="$PROJECT_DIR$/wicsite/settings.py" />
       </list>
     </option>
   </component>
@@ -570,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="10" selection-start="5072" selection-end="5082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wic/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.0">
@@ -609,10 +600,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.5445545">
+        <state line="22" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="26" selection-start="4239" selection-end="4239" vertical-scroll-proportion="0.5049505">
+          <folding />
         </state>
       </provider>
     </entry>
