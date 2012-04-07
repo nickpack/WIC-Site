@@ -10,16 +10,11 @@
 </head>
 
 <body>
-<div id="sidebar">
-    {% block sidebar %}
-    <ul>
-        <li><a href="/">Home</a></li>
-    </ul>
-    {% endblock %}
-</div>
-
-<div id="content">
-    {% block content %}{% endblock %}
-</div>
+  <div id="wrapper">
+    <div id="header">&nbsp;</div>
+    <div id="container">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
 </body>
 </html>
