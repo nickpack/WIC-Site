@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Band</h1>
+    <h1 class="heading">Band</h1>
     {% if members %}
-    <ul>
+    <div>
         {% for member in members %}
-        <li>{{ member.nickname }}</li>
+        <p>{{ member.first_name }} {{ member.last_name }}<br>
+           {{ member.role_in_band }}</p>
+        <p>{{ member.gear }}<br>
+           {{ member.bio }}</p>
         {% endfor %}
-    </ul>
+    </div>
     {% else %}
     <p>No members are available.</p>
     {% endif %}
