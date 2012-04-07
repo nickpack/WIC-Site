@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1 class="heading">Band</h1>
     {% if members %}
     <div>
         {% for member in members %}
-        <p>{{ member.first_name }} {{ member.last_name }}<br>
-           {{ member.role_in_band }}</p>
+        <h1 class="heading">{{ member.first_name }} {{ member.last_name }}</h1>
+           <p>{{ member.role_in_band }}</p>
         <p>Gear: {{ member.gear }}<br>
            {{ member.bio }}</p>
         {% endfor %}
