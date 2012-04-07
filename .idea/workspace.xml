@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wicsite/wic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wicsite/wic/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wicsite/wic/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wicsite/wic/resources.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wicsite/wic/urls.py" afterPath="" />
     </list>
     <ignored path="wicnew.iws" />
     <ignored path=".idea/workspace.xml" />
