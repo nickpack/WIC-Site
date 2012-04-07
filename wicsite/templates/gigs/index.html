@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{% if gig_list %}
+<ul>
+    {% for gig in gig_list %}
+    <li>{{ gig.title }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No gigs are available.</p>
+{% endif %}
+{% endblock %}

@@ -56,3 +56,10 @@ class PushMessage(models.Model):
 
     def __unicode__(self):
         return self.message
+
+class NewsArticle(models.Model):
+    title = models.CharField(max_length=255)
+    article_date = models.DateField()
+    posted_by = models.ManyToManyField(BandMember)
+    article_body = models.TextField()
+
