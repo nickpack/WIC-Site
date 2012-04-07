@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wicsite/templates/band/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wicsite/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wicsite/templates/gigs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wicsite/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/flickrclient.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/management/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/management/commands/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/management/commands/flickrphotos.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/templatetags/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/templatetags/flickrphoto.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wic/xmltramp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wicsite/templates/media/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.sqlite" afterPath="$PROJECT_DIR$/local.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/admin.py" afterPath="$PROJECT_DIR$/wic/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/models.py" afterPath="$PROJECT_DIR$/wic/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/views.py" afterPath="$PROJECT_DIR$/wic/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/urls.py" afterPath="$PROJECT_DIR$/wicsite/urls.py" />
     </list>
     <ignored path="wicnew.iws" />
@@ -33,28 +37,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wic/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="10" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.0">
+            <state line="67" column="13" selection-start="2063" selection-end="2072" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wic/urls.py">
+      <file leaf-file-name="flickrphoto.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wic/templatetags/flickrphoto.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="32" selection-start="108" selection-end="117" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flickrphotos.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wic/management/commands/flickrphotos.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="35" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.20792079">
+              <folding>
+                <element signature="e#25#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flickrclient.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wic/flickrclient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="16" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#55#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wicsite/templates/media/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="67" selection-start="202" selection-end="202" vertical-scroll-proportion="-4.5652175">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wic/templatetags/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -65,7 +98,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wic/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+            <state line="52" column="65" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -73,46 +106,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wicsite/templates/band/index.html">
+      <file leaf-file-name="resources.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wic/resources.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="50" selection-end="50" vertical-scroll-proportion="-1.3043479">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="37" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wicsite/templates/gigs/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="151" selection-end="203" vertical-scroll-proportion="-6.521739">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wicsite/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="37" selection-start="208" selection-end="208" vertical-scroll-proportion="-6.521739">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wic/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="16" selection-start="1851" selection-end="1863" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="202" selection-end="202" vertical-scroll-proportion="0.2572899">
+            <state line="0" column="0" selection-start="0" selection-end="708" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -136,11 +153,17 @@
         <option value="$PROJECT_DIR$/wicsite/settings.py" />
         <option value="$PROJECT_DIR$/wicsite/templates/base.html" />
         <option value="$PROJECT_DIR$/wicsite/templates/gigs/index.html" />
-        <option value="$PROJECT_DIR$/wic/models.py" />
-        <option value="$PROJECT_DIR$/wicsite/urls.py" />
         <option value="$PROJECT_DIR$/wicsite/templates/band/index.html" />
-        <option value="$PROJECT_DIR$/wic/views.py" />
         <option value="$PROJECT_DIR$/wicsite/templates/index.html" />
+        <option value="$PROJECT_DIR$/wic/xmltramp.py" />
+        <option value="$PROJECT_DIR$/wic/models.py" />
+        <option value="$PROJECT_DIR$/wic/admin.py" />
+        <option value="$PROJECT_DIR$/wic/templatetags/flickrphoto.py" />
+        <option value="$PROJECT_DIR$/wicsite/urls.py" />
+        <option value="$PROJECT_DIR$/wic/views.py" />
+        <option value="$PROJECT_DIR$/wicsite/templates/media/index.html" />
+        <option value="$PROJECT_DIR$/wic/flickrclient.py" />
+        <option value="$PROJECT_DIR$/wic/management/commands/flickrphotos.py" />
       </list>
     </option>
   </component>
@@ -244,6 +267,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gigs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -284,6 +329,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wicnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -296,6 +399,13 @@
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wic/templatetags" />
+      <recent name="$PROJECT_DIR$/wic/management/commands" />
+      <recent name="$PROJECT_DIR$/wic/management" />
+    </key>
   </component>
   <component name="RunManager" selected="Django server.wicnew">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -482,20 +592,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="10" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wic/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="37" selection-start="208" selection-end="208" vertical-scroll-proportion="-6.521739">
@@ -503,9 +599,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wic/xmltramp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="360" column="37" selection-start="13096" selection-end="13096" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/management/commands/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/templates/gigs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="211" selection-end="212" vertical-scroll-proportion="-7.173913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="708" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="65" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+        <state line="13" column="37" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
@@ -514,38 +668,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wic/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="16" selection-start="1851" selection-end="1863" vertical-scroll-proportion="0.0">
+        <state line="67" column="13" selection-start="2063" selection-end="2072" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wic/views.py">
+    <entry file="file://$PROJECT_DIR$/wic/templatetags/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/templates/media/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="67" selection-start="202" selection-end="202" vertical-scroll-proportion="-4.5652175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/templatetags/flickrphoto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="32" selection-start="108" selection-end="117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/flickrclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="16" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#55#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/templates/band/index.html">
+    <entry file="file://$PROJECT_DIR$/wic/management/commands/flickrphotos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="50" selection-end="50" vertical-scroll-proportion="-1.3043479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/templates/gigs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="151" selection-end="203" vertical-scroll-proportion="-6.521739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="202" selection-end="202" vertical-scroll-proportion="0.2572899">
-          <folding />
+        <state line="37" column="35" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.20792079">
+          <folding>
+            <element signature="e#25#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

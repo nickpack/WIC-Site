@@ -63,3 +63,19 @@ class NewsArticle(models.Model):
     posted_by = models.ManyToManyField(BandMember)
     article_body = models.TextField()
 
+class Photo(models.Model):
+    title = models.CharField(blank=True, max_length=100)
+    flickr_id = models.IntegerField()
+    flickr_owner = models.CharField(max_length=20)
+    flickr_server = models.IntegerField()
+    flickr_secret = models.CharField(max_length=50)
+
+    class Admin:
+        list_display = ('title',)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return "/photos/%s/" % self.id
+

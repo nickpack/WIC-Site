@@ -35,3 +35,19 @@ def band_index(request):
         'members': band_members,
         })
     return HttpResponse(t.render(c))
+
+def media_index(request):
+    photos = Photo.objects.all()
+    paginator = Paginator(photos, 20)
+
+    page = request.GET.get('page')
+    try:
+        pics = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        pics = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        pics = paginator.page(paginator.num_pages)
+
+    return render_to_response('media/index.html', {"photos": pics})
