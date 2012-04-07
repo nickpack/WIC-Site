@@ -21,6 +21,14 @@ def main_index(request):
 
     return render_to_response('index.html', {"articles": articles})
 
+def band_index(request):
+    members = BandMember.objects.all()
+    t = loader.get_template('band/index.html')
+    c = Context({
+        'members': members,
+    })
+    return HttpResponse(t.render(c))
+
 def gigs_index(request):
     gig_list = Gig.objects.all().order_by('start_date')
     t = loader.get_template('gigs/index.html')

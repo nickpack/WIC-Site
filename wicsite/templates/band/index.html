@@ -1,4 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Oh Herro</h1>
+    <h1>Band</h1>
+    {% if members %}
+    <ul>
+        {% for member in members %}
+        <li>{{ member.nickname }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No members are available.</p>
+    {% endif %}
 {% endblock %}

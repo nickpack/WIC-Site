@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^live/$', 'wic.views.gigs_index'),
     url(r'^media/$', 'wic.views.media_index'),
+    url(r'^band/$', 'wic.views.band_index'),
     url(r'^contact/$', 'wic.views.contact'),
     url(r'^$', 'wic.views.main_index'),
 )
