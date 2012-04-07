@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 {% if gig_list %}
-<ul>
+<div>
     {% for gig in gig_list %}
-    <li>{{ gig.title }}</li>
+    <p>{{ gig.title }}<br>
+       {{ gig.location }}<br>
+       {{ gig.event_info }}<br>
+       {{ gig.start.date }} - {{ gig.end.date }}<br>
+       {{ gig.other_bands }}</p>
     {% endfor %}
 </ul>
 {% else %}
