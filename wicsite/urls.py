@@ -5,12 +5,6 @@ from wic.resources import *
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'wicsite.views.home', name='home'),
-    # url(r'^wicsite/', include('wicsite.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^live/$', 'wic.views.gigs_index'),
     url(r'^media/$', 'wic.views.media_index'),
@@ -19,4 +13,6 @@ urlpatterns = patterns('',
     url(r'^$', 'wic.views.main_index'),
     url(r'^api/devices/$', ListOrCreateModelView.as_view(resource=DeviceTokensResource)),
     url(r'^api/live/$', ListOrCreateModelView.as_view(resource=GigsResource)),
+    url(r'^api/photos/$', ListOrCreateModelView.as_view(resource=PhotosResource)),
+    url(r'^api/discography/$', ListOrCreateModelView.as_view(resource=PhotosResource)),
 )

@@ -23,3 +23,9 @@ class AlbumsResource(ModelResource):
 
 class DeviceTokensResource(ModelResource):
     model = DeviceToken
+
+class PhotosResource(ModelResource):
+    model = Photo
+
+class DiscographyResource(ModelResource):
+    model = Album
