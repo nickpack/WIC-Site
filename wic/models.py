@@ -1,5 +1,7 @@
 __author__ = 'Nick Pack'
 from django.db import models
+from django.conf import settings
+from apns import APNs, Payload
 
 class BandMember(models.Model):
     nickname = models.CharField(max_length=30)
@@ -50,12 +52,26 @@ class DeviceToken(models.Model):
         return self.device_id
 
 class PushMessage(models.Model):
-    device_id = models.ManyToManyField(DeviceToken)
     message = models.CharField(max_length=255)
     date_sent = models.DateField(auto_now=True, editable=False)
 
     def __unicode__(self):
         return self.message
+
+    def save(self, force_insert=False, force_update=False, using=None):
+        apns = APNs(use_sandbox=settings.APN_CONFIG['use_sandbox'], cert_file=settings.APN_CONFIG['cert_file'], key_file=settings.APN_CONFIG['key_file'])
+
+        device_tokens = DeviceToken.objects.all()
+
+        for device in device_tokens:
+            try:
+                payload = Payload(alert=self.message, sound="default", badge=1)
+                apns.gateway_server.send_notification(device.device_id, payload)
+            except Exception:
+                continue
+
+        super(PushMessage, self).save()
+
 
 class NewsArticle(models.Model):
     title = models.CharField(max_length=255)
