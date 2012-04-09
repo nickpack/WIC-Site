@@ -32,3 +32,6 @@ class DiscographyResource(ModelResource):
 
 class MembersResource(ModelResource):
     model = BandMember
+
+class NewsResource(ModelResource):
+    model = NewsArticle
