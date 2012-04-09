@@ -5,6 +5,7 @@
     <div>
         {% for member in members %}
         <h1 class="gig-title">{{ member.first_name }} {{ member.last_name }}</h1>
+        {{ member.avatar.url }}
         {% thumbnail member.avatar "200" as im %}
             <img src="{{ im.url }}" class="member-avatars" alt="{{ member.nickname }}" />
         {% endthumbnail %}
