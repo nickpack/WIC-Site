@@ -3,7 +3,9 @@ South==0.7.4
 URLObject==2.0.1
 apns==1.1.1
 distribute==0.6.24
+django-cumulus==1.0.5
 djangorestframework==0.3.3
 psycopg2==2.4.5
 pyOpenSSL==0.13
+python-cloudfiles==1.7.10
 wsgiref==0.1.2
