@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/admin.py" afterPath="$PROJECT_DIR$/wic/admin.py" />
     </list>
     <ignored path="wicnew.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="4" selection-start="5817" selection-end="5817" vertical-scroll-proportion="0.5792079">
+            <state line="175" column="4" selection-start="5817" selection-end="5817" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wic/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+            <state line="12" column="30" selection-start="358" selection-end="358" vertical-scroll-proportion="0.2970297">
               <folding>
                 <element signature="e#25#49#0" expanded="true" />
               </folding>
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/wic/models.py" />
         <option value="$PROJECT_DIR$/wicsite/templates/band/index.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/wic/admin.py" />
         <option value="$PROJECT_DIR$/wicsite/settings.py" />
+        <option value="$PROJECT_DIR$/wic/admin.py" />
       </list>
     </option>
   </component>
@@ -600,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wic/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="74" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
@@ -614,19 +607,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wic/admin.py">
+    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#25#49#0" expanded="true" />
-          </folding>
+        <state line="175" column="4" selection-start="5817" selection-end="5817" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
+    <entry file="file://$PROJECT_DIR$/wic/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="4" selection-start="5817" selection-end="5817" vertical-scroll-proportion="0.5792079">
+        <state line="49" column="74" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wic/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="358" selection-end="358" vertical-scroll-proportion="0.2970297">
+          <folding>
+            <element signature="e#25#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
