@@ -2,6 +2,8 @@ __author__ = 'Nick Pack'
 from django.db import models
 from django.conf import settings
 from apns import APNs, Payload
+from imagekit.models.fields import ImageSpecField
+from imagekit.processors import ResizeToFill, Adjust
 
 class BandMember(models.Model):
     nickname = models.CharField(max_length=30)
@@ -11,6 +13,9 @@ class BandMember(models.Model):
     bio = models.TextField()
     gear = models.TextField()
     avatar = models.ImageField(upload_to='avatars')
+    thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
+                                ResizeToFill(200, 200)], image_field='avatar',
+        format='JPEG', options={'quality': 90})
     is_active = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -41,6 +46,9 @@ class Album(models.Model):
     members = models.ManyToManyField(BandMember)
     tracks = models.ManyToManyField(Track)
     cover = models.ImageField(upload_to='albums')
+    thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
+                                ResizeToFill(200, 200)], image_field='cover',
+        format='JPEG', options={'quality': 90})
 
     def __unicode__(self):
         return self.title

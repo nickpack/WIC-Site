@@ -5,7 +5,7 @@ URLObject==2.0.1
 apns==1.1.1
 distribute==0.6.24
 django-cumulus==1.0.5
-django-imagekit==1.1
+-e git://github.com/jdriscoll/django-imagekit.git#egg=django-imagekit
 django-pylibmc-sasl==0.2.4
 djangorestframework==0.3.3
 psycopg2==2.4.5
