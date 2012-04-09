@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'south',
     'djangorestframework',
     'cumulus',
+    'sorl.thumbnail',
 )
 
 # A sample logging configuration. The only tangible logging
