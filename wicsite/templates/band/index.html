@@ -4,8 +4,10 @@
     <div>
         {% for member in members %}
         <h1 class="gig-title">{{ member.first_name }} {{ member.last_name }}</h1>
-           <img src="http://c13617789.r89.cf2.rackcdn.com/{{ member.avatar }}" class="member-avatars">
-           <p>{{ member.role_in_band }}</p>
+        {% thumbnail member.avatar "200" as im %}
+            <img src="{{ im.url }}" class="member-avatars" alt="{{ member.nickname }}" />
+        {% endthumbnail %}
+        <p>{{ member.role_in_band }}</p>
         <p>Gear: {{ member.gear }}<br>
            {{ member.bio }}</p>
         {% endfor %}
