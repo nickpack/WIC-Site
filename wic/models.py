@@ -10,7 +10,7 @@ class BandMember(models.Model):
     role_in_band = models.CharField(max_length=255)
     bio = models.TextField()
     gear = models.TextField()
-    avatar = models.FileField(upload_to='avatars')
+    avatar = models.ImageField(upload_to='avatars')
     is_active = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -40,7 +40,7 @@ class Album(models.Model):
     label = models.CharField(max_length=255)
     members = models.ManyToManyField(BandMember)
     tracks = models.ManyToManyField(Track)
-    cover = models.FileField(upload_to='albums')
+    cover = models.ImageField(upload_to='albums')
 
     def __unicode__(self):
         return self.title
