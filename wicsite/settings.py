@@ -168,12 +168,12 @@ CUMULUS_STATIC_CONTAINER = 'walkincoma'
 CUMULUS_USE_SERVICENET = False
 CUMULUS_FILTER_LIST = []
 
-CACHES = {
+'''CACHES = {
     'default': {
         'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
         'TIMEOUT': 10,
         }
-}
+}'''
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
