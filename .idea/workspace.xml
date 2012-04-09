@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/templates/band/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.15437393">
+            <state line="6" column="31" selection-start="226" selection-end="226" vertical-scroll-proportion="0.15437393">
               <folding />
             </state>
           </provider>
@@ -625,7 +625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/templates/band/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.15437393">
+        <state line="6" column="31" selection-start="226" selection-end="226" vertical-scroll-proportion="0.15437393">
           <folding />
         </state>
       </provider>
