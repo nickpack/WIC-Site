@@ -17,4 +17,5 @@ urlpatterns = patterns('',
     url(r'^api/discography/$', ListOrCreateModelView.as_view(resource=PhotosResource)),
     url(r'^api/members/$', ListOrCreateModelView.as_view(resource=MembersResource)),
     url(r'^api/news/$', ListOrCreateModelView.as_view(resource=NewsResource)),
+    url(r'^api/albums/$', ListOrCreateModelView.as_view(resource=AlbumsResource)),
 )

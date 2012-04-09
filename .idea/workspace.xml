@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/resources.py" afterPath="$PROJECT_DIR$/wic/resources.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/urls.py" afterPath="$PROJECT_DIR$/wicsite/urls.py" />
     </list>
     <ignored path="wicnew.iws" />
@@ -85,7 +83,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.4950495">
+            <state line="21" column="0" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.519802">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -149,8 +147,8 @@
         <option value="$PROJECT_DIR$/wicsite/settings.py" />
         <option value="$PROJECT_DIR$/wic/models.py" />
         <option value="$PROJECT_DIR$/wic/management/commands/apnfeedback.py" />
-        <option value="$PROJECT_DIR$/wic/resources.py" />
         <option value="$PROJECT_DIR$/wicsite/urls.py" />
+        <option value="$PROJECT_DIR$/wic/resources.py" />
       </list>
     </option>
   </component>
@@ -560,6 +558,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wic/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wic/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="80" selection-start="2129" selection-end="2273" vertical-scroll-proportion="0.0" />
@@ -572,14 +575,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wic/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.4950495">
+        <state line="21" column="0" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.519802">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
