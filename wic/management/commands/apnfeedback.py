@@ -28,7 +28,7 @@ class Command(BaseCommand):
             self.debug = 0
 
         apns = APNs(use_sandbox=True, cert_file=settings.APN_CONFIG['cert_file'], key_file=settings.APN_CONFIG['key_file'])
-        
+
         for (token_hex, fail_time) in apns.feedback_server.items():
             if self.debug is 1:
                 print "Expiring %s from registered device tokens." % token_hex

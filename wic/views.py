@@ -22,7 +22,7 @@ def main_index(request):
     return render_to_response('index.html', {"articles": articles})
 
 def band_index(request):
-    members = BandMember.objects.all()
+    members = BandMember.objects.filter(is_active=True)
     t = loader.get_template('band/index.html')
     c = Context({
         'members': members,
