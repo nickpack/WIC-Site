@@ -161,5 +161,7 @@ CUMULUS = {
     'USERNAME': 'nickpack',
     'CUMULUS_API_KEY': 'c63ad469dc43017b8630b67eb9446d0c',
     'CUMULUS_CONTAINER': 'walkincoma',
+    'STATIC_CONTAINER': 'walkincoma',
 }
 DEFAULT_FILE_STORAGE = 'cumulus.storage.CloudFilesStorage'
+STATICFILES_STORAGE = 'cumulus.storage.CloudFilesStaticStorage'

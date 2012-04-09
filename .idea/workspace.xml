@@ -56,7 +56,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.72772276">
+            <state line="166" column="63" selection-start="5612" selection-end="5612" vertical-scroll-proportion="0.9009901">
               <folding />
             </state>
           </provider>
@@ -579,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.72772276">
+        <state line="166" column="63" selection-start="5612" selection-end="5612" vertical-scroll-proportion="0.9009901">
           <folding />
         </state>
       </provider>
