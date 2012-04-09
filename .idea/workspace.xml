@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/admin.py" afterPath="$PROJECT_DIR$/wic/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
     </list>
     <ignored path="wicnew.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="13" selection-start="4333" selection-end="4333" vertical-scroll-proportion="0.0">
+            <state line="173" column="20" selection-start="5797" selection-end="5797" vertical-scroll-proportion="0.52970296">
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wic/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.2970297">
+            <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#25#49#0" expanded="true" />
               </folding>
@@ -142,11 +142,11 @@
         <option value="$PROJECT_DIR$/wic/management/commands/apnfeedback.py" />
         <option value="$PROJECT_DIR$/wic/views.py" />
         <option value="$PROJECT_DIR$/wic/resources.py" />
-        <option value="$PROJECT_DIR$/wicsite/settings.py" />
         <option value="$PROJECT_DIR$/wic/models.py" />
         <option value="$PROJECT_DIR$/wicsite/templates/band/index.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/wic/admin.py" />
+        <option value="$PROJECT_DIR$/wicsite/settings.py" />
       </list>
     </option>
   </component>
@@ -564,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="13" selection-start="4333" selection-end="4333" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wic/management/commands/flickrphotos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="22" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
@@ -623,10 +616,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wic/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.2970297">
+        <state line="12" column="42" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#25#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="20" selection-start="5797" selection-end="5797" vertical-scroll-proportion="0.52970296">
+          <folding />
         </state>
       </provider>
     </entry>

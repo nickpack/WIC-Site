@@ -171,7 +171,7 @@ CUMULUS_FILTER_LIST = []
 CACHES = {
     'default': {
         'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
-        'TIMEOUT': 300,
+        'TIMEOUT': 10,
         }
 }
 
