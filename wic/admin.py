@@ -8,9 +8,9 @@ class PhotoAdmin(admin.ModelAdmin):
     admin_thumbnail = AdminThumbnail(image_field='thumbnail')
 
 
-admin.site.register(Photo, PhotoAdmin)
+admin.site.register(Photo)
 admin.site.register(Gig)
-admin.site.register(BandMember)
+admin.site.register(BandMember, PhotoAdmin)
 admin.site.register(Album)
 admin.site.register(Track)
 admin.site.register(NewsArticle)
