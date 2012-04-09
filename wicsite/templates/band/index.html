@@ -4,6 +4,7 @@
     <div>
         {% for member in members %}
         <h1 class="gig-title">{{ member.first_name }} {{ member.last_name }}</h1>
+           {{ member.avatar }}
            <p>{{ member.role_in_band }}</p>
         <p>Gear: {{ member.gear }}<br>
            {{ member.bio }}</p>
