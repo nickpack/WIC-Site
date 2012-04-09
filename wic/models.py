@@ -11,7 +11,7 @@ class BandMember(models.Model):
     bio = models.TextField()
     gear = models.TextField()
     avatar = models.FileField(upload_to='avatars')
-    is_active = models.BooleanField(initial=False,label='Is this an active member of the band')
+    is_active = models.BooleanField(default=False,label='Is this an active member of the band')
 
     def __unicode__(self):
         return self.nickname
