@@ -4,7 +4,7 @@
     <div>
         {% for member in members %}
         <h1 class="gig-title">{{ member.first_name }} {{ member.last_name }}</h1>
-           <img src="{{ member.avatar }}" class="member-avatars">
+           <img src="http://c13617789.r89.cf2.rackcdn.com/{{ member.avatar }}" class="member-avatars">
            <p>{{ member.role_in_band }}</p>
         <p>Gear: {{ member.gear }}<br>
            {{ member.bio }}</p>
