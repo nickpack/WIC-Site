@@ -157,11 +157,12 @@ APN_CONFIG = {
     'use_sandbox': True,
 }
 
-CUMULUS = {
-    'USERNAME': 'nickpack',
-    'CUMULUS_API_KEY': 'c63ad469dc43017b8630b67eb9446d0c',
-    'CUMULUS_CONTAINER': 'walkincoma',
-    'STATIC_CONTAINER': 'walkincoma',
-}
+# RS Cloud files bizzo
+CUMULUS_USERNAME = 'nickpack'
+CUMULUS_API_KEY = 'c63ad469dc43017b8630b67eb9446d0c'
+CUMULUS_CONTAINER = 'walkincoma'
 DEFAULT_FILE_STORAGE = 'cumulus.storage.CloudFilesStorage'
-STATICFILES_STORAGE = 'cumulus.storage.CloudFilesStaticStorage'
+
+CUMULUS_STATIC_CONTAINER = 'walkincoma'
+CUMULUS_USE_SERVICENET = False
+CUMULUS_FILTER_LIST = []
