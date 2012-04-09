@@ -19,7 +19,7 @@ class MembersResource(ModelResource):
 
 class AlbumsResource(ModelResource):
     model = Album
-    ordering = ('release_date')
+    #ordering = ('release_date')
 
 class DeviceTokensResource(ModelResource):
     model = DeviceToken
@@ -29,9 +29,6 @@ class PhotosResource(ModelResource):
 
 class DiscographyResource(ModelResource):
     model = Album
-
-class MembersResource(ModelResource):
-    model = BandMember
 
 class NewsResource(ModelResource):
     model = NewsArticle
