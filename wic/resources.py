@@ -29,3 +29,6 @@ class PhotosResource(ModelResource):
 
 class DiscographyResource(ModelResource):
     model = Album
+
+class MembersResource(ModelResource):
+    model = BandMember
