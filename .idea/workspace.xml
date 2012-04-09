@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wic/resources.py" afterPath="$PROJECT_DIR$/wic/resources.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
     </list>
     <ignored path="wicnew.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
       <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,19 +54,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="55" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0">
+            <state line="175" column="0" selection-start="5797" selection-end="5797" vertical-scroll-proportion="0.95049506">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resources.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="resources.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wic/resources.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="5" selection-start="492" selection-end="492" vertical-scroll-proportion="0.47029704">
+            <state line="21" column="5" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,8 +146,8 @@
         <option value="$PROJECT_DIR$/wic/management/commands/apnfeedback.py" />
         <option value="$PROJECT_DIR$/wic/views.py" />
         <option value="$PROJECT_DIR$/wic/models.py" />
-        <option value="$PROJECT_DIR$/wicsite/settings.py" />
         <option value="$PROJECT_DIR$/wic/resources.py" />
+        <option value="$PROJECT_DIR$/wicsite/settings.py" />
       </list>
     </option>
   </component>
@@ -571,14 +572,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="55" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -595,7 +589,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wic/resources.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="492" selection-end="492" vertical-scroll-proportion="0.47029704">
+        <state line="21" column="5" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="0" selection-start="5797" selection-end="5797" vertical-scroll-proportion="0.95049506">
           <folding />
         </state>
       </provider>

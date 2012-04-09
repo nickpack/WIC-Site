@@ -166,3 +166,10 @@ DEFAULT_FILE_STORAGE = 'cumulus.storage.CloudFilesStorage'
 CUMULUS_STATIC_CONTAINER = 'walkincoma'
 CUMULUS_USE_SERVICENET = False
 CUMULUS_FILTER_LIST = []
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+        'TIMEOUT': 300,
+        }
+}
