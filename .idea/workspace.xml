@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab451b8-bc9f-4d2e-96aa-8d92a14810b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wicsite/settings.py" afterPath="$PROJECT_DIR$/wicsite/settings.py" />
     </list>
     <ignored path="wicnew.iws" />
@@ -57,7 +56,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="12" selection-start="4212" selection-end="4212" vertical-scroll-proportion="-0.31188118">
+            <state line="159" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.72772276">
               <folding />
             </state>
           </provider>
@@ -580,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wicsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="12" selection-start="4212" selection-end="4212" vertical-scroll-proportion="-0.31188118">
+        <state line="159" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.72772276">
           <folding />
         </state>
       </provider>
