@@ -15,7 +15,7 @@ class BandMember(models.Model):
     avatar = models.ImageField(upload_to='avatars')
     thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
                                 ResizeToFill(200, 200)], image_field='avatar',
-        format='JPEG', options={'quality': 90})
+        format='JPEG', options={'quality': 90},  cache_to='thumbs')
     is_active = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -48,7 +48,7 @@ class Album(models.Model):
     cover = models.ImageField(upload_to='albums')
     thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
                                 ResizeToFill(200, 200)], image_field='cover',
-        format='JPEG', options={'quality': 90})
+        format='JPEG', options={'quality': 90}, cache_to='thumbs')
 
     def __unicode__(self):
         return self.title
