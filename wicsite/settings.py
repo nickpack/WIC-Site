@@ -6,19 +6,17 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('Nick Pack', 'nick@nickpack.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'local.sqlite',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'wicsite',
+        'USER': 'walkincoma',
+        'PASSWORD': 'nykrttsx2005'
     }
 }
 
@@ -55,7 +53,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'http://c13617789.r89.cf2.rackcdn.com/media/'
+MEDIA_URL = '/static/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -65,7 +63,7 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://c13617789.r89.cf2.rackcdn.com/'
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -119,7 +117,6 @@ INSTALLED_APPS = (
     'wic',
     'south',
     'djangorestframework',
-    'cumulus',
     'imagekit',
 )
 
@@ -158,15 +155,6 @@ APN_CONFIG = {
     'use_sandbox': True,
 }
 
-# RS Cloud files bizzo
-CUMULUS_USERNAME = 'nickpack'
-CUMULUS_API_KEY = 'c63ad469dc43017b8630b67eb9446d0c'
-CUMULUS_CONTAINER = 'walkincoma'
-DEFAULT_FILE_STORAGE = 'cumulus.storage.CloudFilesStorage'
-
-CUMULUS_STATIC_CONTAINER = 'walkincoma'
-CUMULUS_USE_SERVICENET = False
-CUMULUS_FILTER_LIST = []
 
 '''CACHES = {
     'default': {
@@ -183,5 +171,4 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "cumulus.context_processors.cdn_url",
 )
