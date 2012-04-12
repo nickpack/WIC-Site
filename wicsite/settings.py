@@ -118,6 +118,7 @@ INSTALLED_APPS = (
     'south',
     'djangorestframework',
     'imagekit',
+    'gunicorn'
 )
 
 # A sample logging configuration. The only tangible logging
