@@ -4,7 +4,7 @@ from django import template
 register = template.Library()
 
 @register.filter(name='flickrurl')
-def get_pic_url(self, size='small'):
+def get_pic_url(self, size='small_square'):
     # small_square=75x75
     # thumb=100 on longest side
     # small=240 on longest side
@@ -13,7 +13,7 @@ def get_pic_url(self, size='small'):
     # original=duh
 
     base_url = "http://static.flickr.com"
-    size_char='s'  # default to small_square
+    size_char='_s'  # default to small_square
 
     if size == 'small_square':
         size_char='_s'

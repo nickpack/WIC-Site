@@ -1,0 +1,38 @@
+body {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background:-moz-linear-gradient(top, #000 500px, #696969 100%) fixed; /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(500px,#000), color-stop(100%,#696969)) fixed; /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top, #000 500px,#696969 100%) fixed; /* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(top, #000 500px,#696969 100%) fixed; /* Opera11.10+ */
+    background:-ms-linear-gradient(top, #000 500px,#696969 100%) fixed; /* IE10+ */
+    background:linear-gradient(top, #000 500px,#696969 100%) fixed; /* W3C */
+}
+
+#mugs {
+    display:block;
+    background:#000 url('../img/mugs.jpg') no-repeat center top;
+    height:230px;
+}
+
+#aquafresh {
+    display:block;
+    background:#FFF;
+    height:100%;
+    padding: 0 10px;
+}
+
+.navbar .brand {
+    font-weight: bold;
+    color:#EFEFEF;
+}
+
+.navbar .brand span {
+    color:#999;
+}
+
+@media (max-width: 979px) {
+    body {
+        padding-top:0 !important;
+    }
+}

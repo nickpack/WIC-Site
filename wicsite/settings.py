@@ -4,6 +4,7 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+THUMBNAIL_DEBUG = DEBUG
 
 ADMINS = (
      ('Nick Pack', 'nick@nickpack.com'),
@@ -47,22 +48,22 @@ USE_L10N = True
 USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+# Example: "/home/static-media/static-media.lawrence.com/static-media/"
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'wic-media')
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# URL that handles the static-media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/static/media/'
+# Examples: "http://static-media.lawrence.com/static-media/", "http://example.com/static-media/"
+MEDIA_URL = '/wic-media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
+# Example: "/home/static-media/static-media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 # URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
+# Example: "http://static-media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
@@ -117,8 +118,9 @@ INSTALLED_APPS = (
     'wic',
     'south',
     'djangorestframework',
-    'imagekit',
-    'gunicorn'
+    'sorl.thumbnail',
+    'gunicorn',
+    'bootstrapform',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -166,6 +168,7 @@ APN_CONFIG = {
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.csrf",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",

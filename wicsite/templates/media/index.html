@@ -1,28 +1,44 @@
 {% extends "base.html" %}
+{% block nav-media %} active{% endblock %}
 {% block content %}
-<h1>Media</h1>
+<div class="row">
+    <div class="span3">
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Media</li>
+                <li><a href="#">Discography</a></li>
+                <li class="active"><a href="#">Photos</a></li>
+                <li><a href="#">Videos</a></li>
+            </ul>
+        </div><!--/.well -->
+    </div><!--/span-->
+    <div class="span9">
+            <div class="page-header">
+                <h1>Photos</h1>
+            </div>
 {% if photos %}
 {% load flickrphoto %}
-<ul>
+
+    <ul class="thumbnails">
     {% for photo in photos %}
-    <li><img src="{{ photo|flickrurl }}" alt="{{ photo.title }}" /></li>
+    <li class="span1"><a href="{{ photo|flickrurl:'medium' }}" class="thumbnail"><img src="{{ photo|flickrurl }}" alt="{{ photo.title }}" /></a></li>
     {% endfor %}
-</ul>
 {% else %}
-<p>No Photos are available.</p>
+    <li>No Photos are available.</li>
 {% endif %}
-<div class="pagination">
-    <span class="step-links">
+        </ul>
+    </div>
+    <ul class="pagination pull-right">
         {% if photos.has_previous %}
-            <a href="?page={{ photos.previous_page_number }}">previous</a>
+            <li><a href="?page={{ photos.previous_page_number }}">previous</a></li>
         {% endif %}
 
-        <span class="current">
-            Page {{ photos.number }} of {{ photos.paginator.num_pages }}.
-        </span>
+        <li class="active">
+            <a href="#">Page {{ photos.number }} of {{ photos.paginator.num_pages }}</a>
+        </li>
         {% if photos.has_next %}
-            <a href="?page={{ photos.next_page_number }}">next</a>
+            <li><a href="?page={{ photos.next_page_number }}">next</a></li>
         {% endif %}
-    </span>
+</ul>
 </div>
 {% endblock %}

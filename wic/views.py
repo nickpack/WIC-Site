@@ -1,5 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import Context, loader
+from django.template.context import RequestContext
 from wic.models import *
 from wic.forms import *
 from django.http import HttpResponse, HttpResponseRedirect
@@ -47,7 +48,7 @@ def band_index(request):
 
 def media_index(request):
     photos = Photo.objects.all()
-    paginator = Paginator(photos, 20)
+    paginator = Paginator(photos, 27)
 
     page = request.GET.get('page')
     try:
@@ -82,4 +83,4 @@ def contact(request):
 
     return render_to_response('contact.html', {
         'form': form,
-    })
+    }, context_instance=RequestContext(request))

@@ -2,8 +2,7 @@ __author__ = 'Nick Pack'
 from django.db import models
 from django.conf import settings
 from apns import APNs, Payload
-from imagekit.models.fields import ImageSpecField
-from imagekit.processors import ResizeToFill, Adjust
+from sorl.thumbnail import ImageField
 
 class BandMember(models.Model):
     nickname = models.CharField(max_length=30)
@@ -12,10 +11,7 @@ class BandMember(models.Model):
     role_in_band = models.CharField(max_length=255)
     bio = models.TextField()
     gear = models.TextField()
-    avatar = models.ImageField(upload_to='avatars')
-    thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
-                                ResizeToFill(200, 200)], image_field='avatar',
-        format='JPEG', options={'quality': 90})
+    avatar = ImageField(upload_to='avatars')
     is_active = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -45,10 +41,7 @@ class Album(models.Model):
     label = models.CharField(max_length=255)
     members = models.ManyToManyField(BandMember)
     tracks = models.ManyToManyField(Track)
-    cover = models.ImageField(upload_to='albums')
-    thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1),
-                                ResizeToFill(200, 200)], image_field='cover',
-        format='JPEG', options={'quality': 90},)
+    cover = ImageField(upload_to='albums')
 
     def __unicode__(self):
         return self.title
@@ -87,6 +80,9 @@ class NewsArticle(models.Model):
     article_date = models.DateField()
     posted_by = models.ManyToManyField(BandMember)
     article_body = models.TextField()
+
+    def __unicode__(self):
+        return self.title
 
 class Photo(models.Model):
     title = models.CharField(blank=True, max_length=100)

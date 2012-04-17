@@ -1,13 +1,25 @@
 {% extends "base.html" %}
+{% block nav-band %}<li class="active"><a href="/band/" title="Band">Band</a></li>{% endblock %}
+{% load thumbnail %}
 {% block content %}
     {% if members %}
-    <div>
+<div class="row">
+<div class="page-header">
+    <h1>The Band <small>They are all cunts</small></h1>
+</div>
+</div>
+    <div class="row">
         {% for member in members %}
-        <h1 class="gig-title">{{ member.first_name }} {{ member.last_name }}</h1>
-        <img src="{{ member.avatar.url }}" alt="{{ member.nickname }}">
-        <p>{{ member.role_in_band }}</p>
-        <p>Gear: {{ member.gear }}<br>
-           {{ member.bio }}</p>
+        <div class="span3">
+        <h4>{{ member.first_name }} {{ member.last_name }}</h4>
+
+        {% thumbnail member.avatar "250x100" crop="45px" as im %}
+        <a href="{{member.avatar.url}}" title="{{ member.nickname }}"><img class="thumbnail" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></a>
+        {% endthumbnail %}
+        <h5>{{ member.role_in_band }}</h5>
+        <p>Gear: {{ member.gear }}</p>
+        <p>{{ member.bio }}</p>
+        </div>
         {% endfor %}
     </div>
     {% else %}
