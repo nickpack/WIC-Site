@@ -1,5 +1,4 @@
 __author__ = 'Nick Pack'
-from django.core.urlresolvers import reverse
 from djangorestframework.resources import ModelResource
 from wic.models import *
 

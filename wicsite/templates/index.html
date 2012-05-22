@@ -1,29 +1,48 @@
 {% extends "base.html" %}
 {% block nav-home %}<li class="active"><a href="/" title="Home">Home</a></li>{% endblock %}
 {% block content %}
-        <h1 class="heading">April 6, 2012</h1>
-        <p>We're currently redesigning our site. Please check back soon, or follow our social networks for the latest news and info.</p>
-{% if articles %}
-<ul>
-{% for article in articles %}
-    <li>{{ article.title }}</li>
-{% endfor %}
-</ul>
-{% else %}
-<p>No articles are available.</p>
-{% endif %}
-<div class="pagination">
-    <span class="step-links">
-        {% if articles.has_previous %}
-            <a href="?page={{ articles.previous_page_number }}">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
-        </span>
-        {% if articles.has_next %}
-            <a href="?page={{ articles.next_page_number }}">next</a>
-        {% endif %}
-    </span>
+<div class="row">
+    <div class="page-header">
+        <h1>Walk In Coma <small>Welcome To The Dirty South</small></h1>
+    </div>
 </div>
+<div class="row">
+    <div class="span12">
+            <p>Walk In Coma hail from the muddy tides of the estuary of the Thames, in a county that already has some big names being tattooed into music history. In the era of pop/electronic/indie act “making it”, vocalist Alex Adlington and guitarist Mark Elliott set out to get music right under your skin with Nick Pack’s fierce drums and Tom Case’s groove-led bass. This alternative metal outfit pound the melodies right through to the listeners’ core.</p>
+            <h4>Let Me Set the Scene</h4>
+            <p>Having played at some of the best venues across Essex(Chinnerys, Hooga) and London(Camden Barfly, O2 Islington Academy2) for the past few years, Walk In Coma provide an energetic and powerful live showcase for their creative riffs and melodies. The sheer volume of the angst filled vocals and the riff fuelled songs ring through your head for an eternity.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="page-header">
+        <h1>News <small>Whats happening?</small></h1>
+    </div>
+    {% if articles %}
+    {% for article in articles %}
+    <div class="span3">
+        <div class="page-header">
+            <h4><a href="{{article.get_absolute_url}}">{{ article.title }}</a></h4>
+            <h6>{{ article.posted_by.all.0.first_name }} {{ article.article_date }}</h6>
+        </div>
+        <p>{{ article.article_body|truncatechars:150 }}</p>
+        <p><a class="btn btn-warning" href="{{article.get_absolute_url}}">Read More</a></p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No articles are available.</p>
+    {% endif %}
+</div>
+        <div class="row">
+    <ul class="pagination">
+        {% if articles.has_previous %}
+        <li><a href="?page={{ articles.previous_page_number }}">previous</a></li>
+        {% endif %}
+        <li class="active">
+            <a href="#">Page {{ articles.number }} of {{ articles.paginator.num_pages }}</a>
+        </li>
+        {% if articles.has_next %}
+        <li><a href="?page={{ photos.next_page_number }}">next</a></li>
+        {% endif %}
+    </ul>
+        </div>
 {% endblock %}

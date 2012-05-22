@@ -1,24 +1,30 @@
 {% extends "base.html" %}
 {% block nav-band %}<li class="active"><a href="/band/" title="Band">Band</a></li>{% endblock %}
 {% load thumbnail %}
+{% block title %}Band{% endblock %}
 {% block content %}
     {% if members %}
 <div class="row">
 <div class="page-header">
-    <h1>The Band <small>They are all cunts</small></h1>
+    <h1>The Band <small>The People</small></h1>
 </div>
 </div>
     <div class="row">
         {% for member in members %}
         <div class="span3">
+            <div class="page-header">
         <h4>{{ member.first_name }} {{ member.last_name }}</h4>
-
+        <h6>{{ member.role_in_band }}</h6>
+            </div>
         {% thumbnail member.avatar "250x100" crop="45px" as im %}
-        <a href="{{member.avatar.url}}" title="{{ member.nickname }}"><img class="thumbnail" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></a>
+        <a href="{{member.avatar.url}}" rel="gallery" title="{{ member.nickname }}"><img class="thumbnail" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></a>
         {% endthumbnail %}
-        <h5>{{ member.role_in_band }}</h5>
-        <p>Gear: {{ member.gear }}</p>
-        <p>{{ member.bio }}</p>
+        <dl>
+            <dt>Gear</dt>
+            <dd>{{ member.gear|linebreaks }}</dd>
+            <dt>Influences</dt>
+            <dd>{{ member.bio|linebreaks }}</dd>
+        </dl>
         </div>
         {% endfor %}
     </div>

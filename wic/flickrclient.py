@@ -1,9 +1,6 @@
 # FlickrClient
 # Copyright (c) 2004 Michele Campeotto
-
-import xmltramp
-import sys
-
+from wic import xmltramp
 from urllib import urlencode
 
 

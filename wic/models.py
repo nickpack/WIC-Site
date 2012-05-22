@@ -1,3 +1,5 @@
+from django.db.models import permalink
+
 __author__ = 'Nick Pack'
 from django.db import models
 from django.conf import settings
@@ -9,9 +11,9 @@ class BandMember(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     role_in_band = models.CharField(max_length=255)
-    bio = models.TextField()
-    gear = models.TextField()
-    avatar = ImageField(upload_to='avatars')
+    bio = models.TextField(null=True)
+    gear = models.TextField(null=True)
+    avatar = ImageField(upload_to='avatars', null=True)
     is_active = models.BooleanField(default=False)
 
     def __unicode__(self):
@@ -23,7 +25,9 @@ class Gig(models.Model):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     location = models.CharField(max_length=255)
-    other_bands = models.CharField(max_length=255)
+    venue_pic = ImageField(upload_to='avatars', null=True)
+    other_bands = models.CharField(max_length=255, null=True)
+    is_cancelled = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.title
@@ -38,7 +42,7 @@ class Track(models.Model):
 class Album(models.Model):
     title = models.CharField(max_length=255)
     release_date = models.DateField()
-    label = models.CharField(max_length=255)
+    label = models.CharField(max_length=255, null=True)
     members = models.ManyToManyField(BandMember)
     tracks = models.ManyToManyField(Track)
     cover = ImageField(upload_to='albums')
@@ -80,12 +84,17 @@ class NewsArticle(models.Model):
     article_date = models.DateField()
     posted_by = models.ManyToManyField(BandMember)
     article_body = models.TextField()
+    slug = models.SlugField(max_length=100, unique=True)
 
     def __unicode__(self):
         return self.title
 
+    @permalink
+    def get_absolute_url(self):
+        return 'view_article', None, { 'slug': self.slug }
+
 class Photo(models.Model):
-    title = models.CharField(blank=True, max_length=100)
+    title = models.CharField(blank=True, max_length=100, null=True)
     flickr_id = models.BigIntegerField()
     flickr_owner = models.CharField(max_length=20)
     flickr_server = models.IntegerField()

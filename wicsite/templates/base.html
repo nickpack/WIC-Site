@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <meta name="author" content="Tom Case, Nick Pack">
     <meta name="description"
-          content="Official website of Essex based alternative metal band Walk In Coma. Includes band blogs, upcoming shows, music, photo galleries and more.">
+          content="{% block metadesc %}Official website of Essex based alternative metal band Walk In Coma. Includes band blogs, upcoming shows, music, photo galleries and more.{% endblock %}">
     <meta name="keywords"
           content="walk in coma, walkincoma, walk, in, coma, southend, southend bands, essex, england, grunge, alternative, rock, metal, live">
-    <title>{% block title %}Walk In Coma{% endblock %}</title>
+    <title>{% block title %}Home{% endblock %} / Walk In Coma</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="/static/css/wic.css" rel="stylesheet">
+    <!--[if lte IE 9]>
+    <link href="/static/css/wic-ie.css" rel="stylesheet">
+    <![endif]-->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,9 +46,9 @@
                     <li class="dropdown{% block nav-media %}{% endblock %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/media">Discography</a></li>
-                            <li><a href="/media">Photos</a></li>
-                            <li><a href="/media">Videos</a></li>
+                            <li><a href="/media/discography">Discography</a></li>
+                            <li><a href="/media/photos">Photos</a></li>
+                            <li><a href="/media/videos">Videos</a></li>
                         </ul>
                     </li>
 
@@ -64,35 +67,28 @@
 </div>
 </div>
 <footer>
-    <div class="span2">
-        <a href="http://www.facebook.com/pages/Walk-In-Coma/65996290389" title="Walk In Coma on Facebook">
-            <img src="/static/img/fail.png"
-                 alt="Walk In Coma on Facebook" width="115" height="23" class="facebook"></a>
+    <div class="row">
+        <div class="span2 offset2">
+            <a href="http://www.facebook.com/pages/Walk-In-Coma/65996290389" title="Walk In Coma on Facebook">
+                <img src="/static/img/facebook.png"
+                     alt="Walk In Coma on Facebook" width="115" height="23" class="facebook"></a>
+        </div>
+        <div class="span2">
+            <a href="http://twitter.com/WalkInComa" title="Walk In Coma on Twitter" target="_blank"><img
+                    src="/static/img/twitter.png" alt="Walk In Coma on Twitter"
+                    width="104" height="20" class="twitter"></a>
+        </div>
+        <div class="span2">
+            <a href="http://www.youtube.com/user/WalkInComaOfficial" title="Walk In Coma on YouTube" target="_blank"><img
+                    src="/static/img/youtube.png" alt="Walk In Coma on YouTube"
+                    width="95" height="51" class="youtube"></a>
+        </div>
     </div>
-    <div class="span2">
-        <a href="http://twitter.com/WalkInComa" title="Walk In Coma on Twitter" target="_blank"><img
-                src="/static/img/twat.png" alt="Walk In Coma on Twitter"
-                width="104" height="20" class="twitter"></a>
+    <div class="row">
+        <div class="span4 offset2"><p>&copy; 2012 Walk In Coma, All rights reserved</p></div>
     </div>
-    <div class="span2">
-        <a href="http://www.youtube.com/user/WalkInComaOfficial" title="Walk In Coma on YouTube" target="_blank"><img
-                src="/static/img/yt.png" alt="Walk In Coma on YouTube"
-                width="95" height="51" class="youtube"></a>
-    </div>
-    <p>&copy; 2012 Walk In Coma</p>
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="/static/js/bootstrap-transition.js"></script>
-<script src="/static/js/bootstrap-alert.js"></script>
-<script src="/static/js/bootstrap-modal.js"></script>
-<script src="/static/js/bootstrap-dropdown.js"></script>
-<script src="/static/js/bootstrap-scrollspy.js"></script>
-<script src="/static/js/bootstrap-tab.js"></script>
-<script src="/static/js/bootstrap-tooltip.js"></script>
-<script src="/static/js/bootstrap-popover.js"></script>
-<script src="/static/js/bootstrap-button.js"></script>
-<script src="/static/js/bootstrap-collapse.js"></script>
-<script src="/static/js/bootstrap-carousel.js"></script>
-<script src="/static/js/bootstrap-typeahead.js"></script>
+<script src="/static/js/wic.js"></script>
 </body>
 </html>
