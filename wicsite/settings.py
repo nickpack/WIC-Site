@@ -17,7 +17,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'walkincoma',
         'USER': 'walkincoma',
-        'PASSWORD': 'nykrttsx2005'
+        'PASSWORD': 'layne1'
     }
 }
 
@@ -157,14 +157,6 @@ APN_CONFIG = {
     'cert_file': "%s/development.pem" % os.path.join(PROJECT_DIR, 'certs'),
     'use_sandbox': True,
 }
-
-
-'''CACHES = {
-    'default': {
-        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
-        'TIMEOUT': 10,
-        }
-}'''
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
