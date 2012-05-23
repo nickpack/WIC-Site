@@ -158,6 +158,14 @@ APN_CONFIG = {
     'use_sandbox': True,
 }
 
+
+'''CACHES = {
+    'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+        'TIMEOUT': 10,
+        }
+}'''
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.csrf",
