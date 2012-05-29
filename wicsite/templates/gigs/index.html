@@ -23,16 +23,14 @@
             <li class="span3">
                 <div class="thumbnail">
                 {% if gig.venue_pic %}
-                    {% thumbnail gig.venue_pic "260x180" as im %}
+                    {% thumbnail gig.venue_pic "260x180" crop="45px" as im %}
                     <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                     {% endthumbnail %}
-                {% else %}
-                    <img src="http://placehold.it/260x180" alt="">
                 {% endif %}
                     <div class="caption">
                         <h5>{{ gig.title }}</h5>
                         <p>{{ gig.start_date }} - {{ gig.end_date }}</p>
-                        <p><a href="#" class="btn btn-primary">More Info</a></p>
+                        <!--p><a href="#" class="btn btn-warning">More Info</a></p-->
                     </div>
                 </div>
             </li>

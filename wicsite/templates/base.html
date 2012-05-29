@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="author" content="Tom Case, Nick Pack">
     <meta name="description"
-          content="{% block metadesc %}Official website of Essex based alternative metal band Walk In Coma. Includes band blogs, upcoming shows, music, photo galleries and more.{% endblock %}">
+          content="
+                  {% block metadesc %}Official website of Essex based alternative metal band Walk In Coma. Includes band blogs, upcoming shows, music, photo galleries and more.{% endblock %}">
     <meta name="keywords"
           content="walk in coma, walkincoma, walk, in, coma, southend, southend bands, essex, england, grunge, alternative, rock, metal, live">
     <title>{% block title %}Home{% endblock %} / Walk In Coma</title>
@@ -37,11 +38,15 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="/">walk<span>in</span>coma</a>
+
             <div class="nav-collapse">
                 <ul class="nav">
-                    {% block nav-home %}<li><a href="/" title="Home">Home</a></li>{% endblock %}
-                    {% block nav-live %}<li><a href="/live/" title="Live">Live</a></li>{% endblock %}
-                    {% block nav-band %}<li><a href="/band/" title="Band">Band</a></li>{% endblock %}
+                    {% block nav-home %}
+                        <li><a href="/" title="Home">Home</a></li>{% endblock %}
+                    {% block nav-live %}
+                        <li><a href="/live/" title="Live">Live</a></li>{% endblock %}
+                    {% block nav-band %}
+                        <li><a href="/band/" title="Band">Band</a></li>{% endblock %}
 
                     <li class="dropdown{% block nav-media %}{% endblock %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media <b class="caret"></b></a>
@@ -49,10 +54,12 @@
                             <li><a href="/media/discography">Discography</a></li>
                             <li><a href="/media/photos">Photos</a></li>
                             <li><a href="/media/videos">Videos</a></li>
+                            <li><a href="http://soundcloud.com/walkincoma/">SoundCloud</a></li>
                         </ul>
                     </li>
 
-                    {% block nav-contact %}<li><a href="/contact/" title="Contact">Contact</a></li>{% endblock %}
+                    {% block nav-contact %}
+                        <li><a href="/contact/" title="Contact">Contact</a></li>{% endblock %}
                 </ul>
             </div>
         </div>
@@ -62,9 +69,9 @@
 
 </div>
 <div id="aquafresh">
-<div class="container">
-    {% block content %}{% endblock %}
-</div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
 </div>
 <footer>
     <div class="row">
@@ -74,12 +81,12 @@
                      alt="Walk In Coma on Facebook" width="115" height="23" class="facebook"></a>
         </div>
         <div class="span2">
-            <a href="http://twitter.com/WalkInComa" title="Walk In Coma on Twitter" target="_blank"><img
+            <a href="http://twitter.com/WalkInComa" title="Walk In Coma on Twitter"><img
                     src="/static/img/twitter.png" alt="Walk In Coma on Twitter"
                     width="104" height="20" class="twitter"></a>
         </div>
         <div class="span2">
-            <a href="http://www.youtube.com/user/WalkInComaOfficial" title="Walk In Coma on YouTube" target="_blank"><img
+            <a href="http://www.youtube.com/user/WalkInComaOfficial" title="Walk In Coma on YouTube"><img
                     src="/static/img/youtube.png" alt="Walk In Coma on YouTube"
                     width="95" height="51" class="youtube"></a>
         </div>
@@ -90,5 +97,20 @@
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="/static/js/wic.js"></script>
+{% block footerjs %}{% endblock %}
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32229053-1']);
+    _gaq.push(['_setDomainName', 'walkincoma.co.uk']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
 </body>
 </html>

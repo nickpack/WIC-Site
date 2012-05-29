@@ -3,46 +3,50 @@
 {% block nav-media %} active{% endblock %}
 {% block title %}Discography{% endblock %}
 {% block content %}
-<div class="row">
-    <div class="span3">
-        <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-                <li class="nav-header">Media</li>
-                <li class="active"><a href="/media/discography"><i class="icon-headphones"></i> Discography</a></li>
-                <li><a href="/media/photos"><i class="icon-picture"></i> Photos</a></li>
-                <li><a href="/media/videos"><i class="icon-facetime-video"></i> Videos</a></li>
-            </ul>
-        </div><!--/.well -->
-    </div><!--/span-->
-    <div class="span9">
-        <div class="page-header">
-            <h1>Discography</h1>
-        </div>
-
-        {% if albums %}
-        {% for album in albums %}
-        <div class="row">
-            <div class="span8">
-                <div class="span2 album">
-                    {% thumbnail album.cover "150x150" as im %}
-                    <img class="thumbnail" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-                    {% endthumbnail %}
-                </div>
-                <div class="span6">
-                    <h4>{{ album.title }}</h4>
-                    <ol>
-                    {% for track in album.tracks.all %}
-                        <li>{{ track.title }}</li>
-                    {% endfor %}
-                    </ol>
-                </div>
+    <div class="row">
+        <div class="span3">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Media</li>
+                    <li class="active"><a href="/media/discography"><i class="icon-headphones"></i> Discography</a></li>
+                    <li><a href="/media/photos"><i class="icon-picture"></i> Photos</a></li>
+                    <li><a href="/media/videos"><i class="icon-facetime-video"></i> Videos</a></li>
+                </ul>
             </div>
         </div>
-        {% endfor %}
-        {% else %}
-        <p>No albums released as yet.</p>
-        {% endif %}
+        <div class="span9">
+            <div class="page-header">
+                <h1>Discography</h1>
+            </div>
+                {% if albums %}
+                    {% for album in albums %}
+                        {% if forloop.counter|divisibleby:4 or forloop.counter == 1 %}
+                            <ul class="thumbnails">
+                        {% endif %}
+                    <li class="span3">
+                    <div class="thumbnail">
+                        {% thumbnail album.cover "260x260" crop="45px"  as im %}
+                            <img src="{{ im.url }}" width="{{ im.width }}"
+                                 height="{{ im.height }}" alt="{{ album.title }}">
+                        {% endthumbnail %}
+                        <div class="caption">
+                            <h5>{{ album.title }}<span class="label label-inverse pull-right">{{ album.release_date }}</span></h5>
+                            <ol>
+                                {% for track in album.tracks.all %}
+                                    <li>{{ track.title }}</li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
+                    </li>
+                    {%  if forloop.counter|divisibleby:3 or forloop.last %}
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <p>No albums released as yet.</p>
+                {% endif %}
 
+        </div>
     </div>
-</div>
 {% endblock %}

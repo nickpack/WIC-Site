@@ -2613,7 +2613,57 @@
     publicMethod.settings = defaults;
 
 }(jQuery, document, this));
-
+(function() {
+    function createPlayer(jqe, video, options) {
+        var ifr = $('iframe', jqe);
+        if (ifr.length === 0) {
+            ifr = $('<iframe scrolling="no" frameborder="no" class="span9">');
+            ifr.addClass('player');
+            if (options.playeropts)
+                ifr.attr(options.playeropts);
+        }
+        var src = 'http://www.youtube.com/embed/' + video;
+        if (options.playopts) {
+            src += '?';
+            for (var k in options.playopts) {
+                src+= k + '=' + options.playopts[k] + '&';
+            }
+        }
+        ifr.attr('src', src);
+        jqe.append(ifr);
+    }
+    var defoptions = {
+        autoplay: false,
+        user: 'walkincomaofficial',
+        player: createPlayer,
+        playeropts: {
+            height: 550
+        },
+        loaded: function() {},
+        playopts: {
+            fs: 1,
+            showinfo: 1,
+            modestbranding: 1,
+        }
+    };
+    $.fn.extend({
+        youTubeChannel: function(options) {
+            var md = $(this);
+            var allopts = $.extend(true, {}, defoptions, options);
+            $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=jsonc&v=2', null, function(data) {
+                var videos = [];
+                var playlist = '';
+                $.each(data.data.items, function(i, item) {
+                    videos.push(item.id);
+                    if (i > 0)
+                        playlist += item.id + ',';
+                });
+                allopts.playopts.playlist = playlist;
+                allopts.player(md, videos[0], allopts);
+            });
+        }
+    });
+})();
 $().ready(function(){
     $('a[rel=gallery]').colorbox();
 });

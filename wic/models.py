@@ -28,9 +28,14 @@ class Gig(models.Model):
     venue_pic = ImageField(upload_to='avatars', null=True)
     other_bands = models.CharField(max_length=255, null=True)
     is_cancelled = models.BooleanField(default=False)
+    #slug = models.SlugField(max_length=100, unique=True)
 
     def __unicode__(self):
         return self.title
+
+    '''@permalink
+    def get_absolute_url(self):
+        return 'view_gig', None, { 'slug': self.slug }'''
 
 class Track(models.Model):
     title = models.CharField(max_length=255)

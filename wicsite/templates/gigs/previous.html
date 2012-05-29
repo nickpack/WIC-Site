@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 {% block nav-live %}<li class="active"><a href="/live/" title="Live">Live</a></li>{% endblock %}
 {% block title %}Past Live Events{% endblock %}
 {% block content %}
@@ -17,22 +18,28 @@
             <h1>Live <small>Past</small></h1>
         </div>
         {% if gig_list %}
-        <ul class="thumbnails">
-            {% for gig in gig_list %}
-            <li class="span3">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/260x180" alt="">
-                    <div class="caption">
-                        <h5>{{ gig.title }}</h5>
-                        <p>{{ gig.start_date }} - {{ gig.end_date }}</p>
-                        <p><a href="#" class="btn btn-primary">More Info</a></p>
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+            <ul class="thumbnails">
+                {% for gig in gig_list %}
+                    <li class="span3">
+                        <div class="thumbnail">
+                            {% if gig.venue_pic %}
+                                {% thumbnail gig.venue_pic "260x180" crop="45px" as im %}
+                                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                                {% endthumbnail %}
+                            {% else %}
+                                <img src="http://placehold.it/260x180" alt="">
+                            {% endif %}
+                            <div class="caption">
+                                <h5>{{ gig.title }}</h5>
+                                <p>{{ gig.start_date }} - {{ gig.end_date }}</p>
+                                <!--p><a href="#" class="btn btn-warning">More Info</a></p-->
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
         {% else %}
-        <p>No gigs are available.</p>
+            <p>No gigs are available.</p>
         {% endif %}
     </div>
 </div>

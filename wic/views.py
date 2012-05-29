@@ -22,9 +22,17 @@ def main_index(request):
     return render_to_response( 'index.html' , {"articles": articles})
 
 def view_article(request, slug):
+    news_articles = NewsArticle.objects.all().order_by('-article_date')
+    paginator = Paginator(news_articles, 8)
+    articles = paginator.page(1)
     return render_to_response( 'newsarticle.html' , {
-        'post': get_object_or_404(NewsArticle, slug=slug)
+        'post': get_object_or_404(NewsArticle, slug=slug),
+        'articles': articles
     })
+
+def view_gig(request, slug):
+    post = get_object_or_404(Gig, slug=slug)
+    return render_to_response( 'gigs/index.html' , {'post': post, } )
 
 def band_index(request):
     members = BandMember.objects.filter(is_active=True)
