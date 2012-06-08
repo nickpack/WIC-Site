@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from djangorestframework.views import ListOrCreateModelView
+from wic.views import *
+from djangorestframework.views import ListModelView, InstanceModelView
 from wic.resources import *
 admin.autodiscover()
 
@@ -17,11 +18,12 @@ urlpatterns = patterns('',
     url(r'^contact/$', 'wic.views.contact' ),
     url(r'^thanks/$', 'django.views.generic.simple.direct_to_template', {'template': 'contact-thanks.html'}),
     url(r'^$', 'wic.views.main_index' ),
-    #url(r'^api/devices/$', ListOrCreateModelView.as_view(resource=DeviceTokensResource)),
-    #url(r'^api/live/$', ListOrCreateModelView.as_view(resource=GigsResource)),
-    #url(r'^api/photos/$', ListOrCreateModelView.as_view(resource=PhotosResource)),
-    #url(r'^api/discography/$', ListOrCreateModelView.as_view(resource=DiscographyResource)),
-    #url(r'^api/members/$', ListOrCreateModelView.as_view(resource=MembersResource)),
-    #url(r'^api/news/$', ListOrCreateModelView.as_view(resource=NewsResource)),
-    #url(r'^api/albums/$', ListOrCreateModelView.as_view(resource=AlbumsResource)),
+    url(r'^api/devices/$', AuthenticatedListOrCreateModelView.as_view(resource=DeviceTokensResource)),
+    url(r'^api/live/$', ListModelView.as_view(resource=GigsResource)),
+    url(r'^api/photos/$', ListModelView.as_view(resource=PhotosResource)),
+    url(r'^api/discography/$', ListModelView.as_view(resource=DiscographyResource)),
+    url(r'^api/members/$', ListModelView.as_view(resource=MembersResource)),
+    url(r'^api/news/$', ListModelView.as_view(resource=NewsResource)),
+    url(r'^api/news/(?P<slug>[^\.]+)/$', InstanceModelView.as_view(resource=NewsResource)),
+    url(r'^api/albums/$', ListModelView.as_view(resource=AlbumsResource)),
 )

@@ -4,8 +4,36 @@ from django.template import Context, loader
 from django.template.context import RequestContext
 from wic.models import *
 from wic.forms import *
+from wic.authentication import APIAuth
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from djangorestframework.renderers import JSONRenderer, JSONPRenderer, XMLRenderer
+from djangorestframework.views import ListModelView, ListOrCreateModelView
+from djangorestframework.permissions import IsAuthenticated
+
+class AuthenticatedListModelView(ListModelView):
+    """
+    Extends django-rest-framework's ListModelView to add our authentication methods to it.
+    """
+    authentication = { APIAuth, }
+    permissions = (IsAuthenticated, )
+    renderers = (
+        JSONRenderer,
+        JSONPRenderer,
+        XMLRenderer
+    )
+
+class AuthenticatedListOrCreateModelView(ListOrCreateModelView):
+    """
+    Extends django-rest-framework's ListOrCreateModelView to add our authentication methods to it.
+    """
+    authentication = { APIAuth, }
+    permissions = (IsAuthenticated, )
+    renderers = (
+        JSONRenderer,
+        JSONPRenderer,
+        XMLRenderer
+    )
 
 def main_index(request):
     news_articles = NewsArticle.objects.all().order_by('-article_date')
