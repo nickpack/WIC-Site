@@ -7,7 +7,7 @@ class GigsResource(ModelResource):
     Simple API resource for gigs
     """
     model = Gig
-    ordering = ('start_date',)
+    ordering = ('-start_date',)
 
 class MembersResource(ModelResource):
     """
@@ -18,7 +18,7 @@ class MembersResource(ModelResource):
 
 class AlbumsResource(ModelResource):
     model = Album
-    #ordering = ('release_date')
+    ordering = ('release_date')
 
 class DeviceTokensResource(ModelResource):
     model = DeviceToken
@@ -31,3 +31,4 @@ class DiscographyResource(ModelResource):
 
 class NewsResource(ModelResource):
     model = NewsArticle
+    ordering = ('-article_date',)
